@@ -6,9 +6,10 @@ import consign from "consign";
 const app = express();
 app.set("json spaces",4);
 consign()
-	.include("routes")
+	.include("models")
+	.then("routes")
 	.into(app);
 
 
-app.listen(PORT, () => console.log("LTask rodando!"));
+app.listen(3000, () => console.log("LTask rodando!"));
 
