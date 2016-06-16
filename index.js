@@ -7,9 +7,10 @@ const app = express();
 app.set("json spaces",4);
 consign()
 	.include("models")
+	.then("libs/middlewares.js")
 	.then("routes")
+	.then("libs/boot.js")
 	.into(app);
 
 
-app.listen(3000, () => console.log("LTask rodando!"));
 
