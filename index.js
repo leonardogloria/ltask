@@ -4,7 +4,6 @@ import consign from "consign";
 
 
 const app = express();
-app.set("json spaces",4);
 consign()
 	.include("libs/config.js")
 	.then("db.js")
